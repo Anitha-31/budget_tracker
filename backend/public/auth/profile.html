@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+   
+</head>
+<body>
+    <header>
+        <h1>Budget Tracking App</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <!-- <li><a href="updateProfile.html">Update Profile</a></li> -->
+                <!-- <li><a href="../transactions/addTransaction.html">Add Transaction</a></li> -->
+                <li><a href="../transactions/viewTransactions.html">View Transactions</a></li>
+                <!-- <li><a href="budgets/addBudget.html">Add Budget</a></li> -->
+                <li><a href="../budgets/listBudgets.html">List Budgets</a></li>
+                <li><a href="../reports/reports.html">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+            <div class="container">
+                <h1>Your Profile</h1>
+                <div id="profile"></div>
+                <button id="update-button" onclick='window.location.href="updateProfile.html" '>Update Profile</button>
+                <button id="logoutButton">Logout</button>
+            </div>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Budget Tracking App. All rights reserved.</p>
+        <p>Follow us on <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+    </footer>
+
+
+
+    
+    <script src="../js/api.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

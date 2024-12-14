@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./reports.js" defer></script>
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+
+    <header>
+        <h1>Budget Tracking App</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../auth/register.html">Register</a></li>
+                <li><a href="../auth/login.html">Login</a></li>
+                <li><a href="../auth/profile.html">Profile</a></li>
+                <!-- <li><a href="../auth/updateProfile.html">Update Profile</a></li>
+                <li><a href="../transactions/addTransaction.html">Add Transaction</a></li> -->
+                <li><a href="../transactions/viewTransactions.html">View Transactions</a></li>
+                <li><a href="../budgets/listBudgets.html">List Budgets</a></li>
+                <li><a href="reports.html" class="active">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Reports</h1>
+
+            <section class="report-section">
+                <h2>Spending by Category</h2>
+                <button id="fetchCategoryReport" class="btn">Generate Report</button>
+                <div>
+                    <canvas id="categoryChart" width="400" height="200"></canvas>
+                </div>
+            </section>
+
+            <section class="report-section">
+                <h2>Monthly Spending</h2>
+                <form id="monthlyReportForm" class="report-form">
+                    <label for="month">Month:</label>
+                    <input type="number" id="month" name="month" min="1" max="12" required>
+
+                    <label for="year">Year:</label>
+                    <input type="number" id="year" name="year" required>
+
+                    <button type="submit" class="btn">Generate Report</button>
+                </form>
+                <div>
+                    <canvas id="monthlyChart" width="800" height="400"></canvas>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Budget Tracking App. All rights reserved.</p>
+        <p>Follow us on <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+    </footer>
+
+</body>
+</html>

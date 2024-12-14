@@ -1,0 +1,38 @@
+-- 1. Users Table
+CREATE TABLE Users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR UNIQUE NOT NULL,
+    email VARCHAR UNIQUE NOT NULL,
+    password_hash VARCHAR NOT NULL,
+    profile_pic VARCHAR,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 2. Transactions Table
+CREATE TABLE Transactions (
+    transaction_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES Users(id) ON DELETE CASCADE,
+    amount DECIMAL NOT NULL,
+    category VARCHAR NOT NULL,
+    date DATE NOT NULL,
+    type ENUM('income', 'expense') NOT NULL,
+    description TEXT
+);
+
+-- 3. Budgets Table
+CREATE TABLE Budgets (
+    budget_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES Users(id) ON DELETE CASCADE,
+    category VARCHAR NOT NULL,
+    monthly_budget DECIMAL NOT NULL,
+    spent DECIMAL DEFAULT 0
+);
+
+
+
+--4. Currencies Table
+CREATE TABLE currencies (
+    currency_id SERIAL PRIMARY KEY,
+    currency_code VARCHAR UNIQUE NOT NULL,
+    exchange_rate DECIMAL NOT NULL
+);

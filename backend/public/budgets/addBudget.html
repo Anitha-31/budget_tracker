@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Budget</title>
+    <script src="./addBudget.js" defer></script>
+    <link rel="stylesheet" href="budgets.css">
+</head>
+<body>
+    <header>
+        <h1>Budget Tracking App</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="../auth/register.html">Register</a></li>
+                <li><a href="../auth/login.html">Login</a></li>
+                <li><a href="../auth/profile.html">Profile</a></li>
+                <li><a href="../transactions/addTransaction.html">Add Transaction</a></li>
+                <li><a href="../transactions/viewTransactions.html">View Transactions</a></li>
+                <li><a href="listBudgets.html">List Budgets</a></li>
+                <li><a href="../reports/reports.html">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Add Budget</h1>
+        <form id="addBudgetForm">
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required>
+            
+            <label for="monthlyBudget">Monthly Budget:</label>
+            <input type="number" id="monthlyBudget" name="monthlyBudget" required>
+            
+            <button type="submit">Add Budget</button>
+        </form>
+        <p id="responseMessage"></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Budget Tracking App. All rights reserved.</p>
+        <p>Follow us on <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+    </footer>
+</body>
+</html>

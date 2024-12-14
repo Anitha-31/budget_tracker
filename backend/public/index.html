@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Budget Tracking App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Budget Tracking App</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="auth/register.html">Register</a></li>
+                <li><a href="auth/login.html">Login</a></li>
+                <li><a href="auth/profile.html">Profile</a></li>
+                <li><a href="auth/updateProfile.html">Update Profile</a></li>
+                <li><a href="transactions/addTransaction.html">Add Transaction</a></li>
+                <li><a href="transactions/viewTransactions.html">View Transactions</a></li>
+                <!-- <li><a href="budgets/addBudget.html">Add Budget</a></li> -->
+                <li><a href="budgets/listBudgets.html">List Budgets</a></li>
+                <li><a href="reports/reports.html">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h2>Welcome to Your Budget Dashboard</h2>
+            <p>Track your finances efficiently. Add transactions, set budgets, and analyze reports to stay in control of your spending.</p>
+            <button onclick="location.href='transactions/addTransaction.html'">Get Started</button>
+        </section>
+        <section class="features">
+            <div class="feature">
+                <img src="https://images.pexels.com/photos/259100/pexels-photo-259100.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Transactions">
+                <h3>Manage Transactions</h3>
+                <p>Easily add, edit, and view your financial transactions.</p>
+            </div>
+            <div class="feature">
+                <img src="https://images.pexels.com/photos/5466785/pexels-photo-5466785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Budget">
+                <h3>Set Budgets</h3>
+                <p>Plan your expenses by setting monthly budgets.</p>
+            </div>
+            <div class="feature">
+                <img src="https://images.pexels.com/photos/669612/pexels-photo-669612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Reports">
+                <h3>Generate Reports</h3>
+                <p>Analyze your spending with detailed financial reports.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Budget Tracking App. All rights reserved.</p>
+        <p>Follow us on <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+    </footer>
+</body>
+</html>
